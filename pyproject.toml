@@ -1,0 +1,22 @@
+[project]
+name = "chessarena-client"
+version = "0.0.1"
+authors = [
+  { name="yu432", email="yurii.a.potapov@gmail.com" },
+]
+description = "Chess engines arena"
+readme = "README.md"
+requires-python = ">=3.8"
+install_requires=[
+        "requests>=2.25.0",
+        "python-chess>=1.999",
+    ],
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/chessarena/chessarena-client"
+Issues = "https://github.com/chessarena/chessarena-client/issues"
