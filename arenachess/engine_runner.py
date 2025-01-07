@@ -57,9 +57,9 @@ def start_engine(user_token, path_to_make_move):
     print("Engine started. Waiting for tasks...")
 
     while True:
-        task = fetch_task(user_token)  # Запрашиваем задачу у сервера
+        task = fetch_task(user_token)  
         if task is None:
-            time.sleep(0.5)  # Если задач нет, подождать немного перед следующим запросом
+            time.sleep(0.5)
             continue
 
         try:
@@ -67,13 +67,10 @@ def start_engine(user_token, path_to_make_move):
             board_fen = task["board_fen"]
             current_color = task["current_color"]
 
-            # Вызываем пользовательскую функцию make_move
             move = make_move(board=board_fen, match_id=match_id, user_color=current_color)
-
-            # Отправляем ход на сервер
             post_move(user_token, match_id, move)
             print(f"Move {move} submitted for match {match_id}")
 
         except Exception as e:
             print(f"Error processing task: {e}")
-            time.sleep(0.5)  # Подождать немного при ошибке перед следующей попыткой
+            time.sleep(0.5) 
