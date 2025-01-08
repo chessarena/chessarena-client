@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="chessarena-client",
-    version="0.1.0",
+    version="0.0.1",
     packages=find_packages(),
     install_requires=[
         "requests>=2.25.0",
@@ -13,7 +13,7 @@ setup(
             "chessarena=arenachess.cli:main",
         ],
     },
-    author="arenachess",
+    author="yu432",
     author_email="yurii.a.potapov@gmail.com",
     description="A chess engines arena",
     long_description=open("README.md").read(),
